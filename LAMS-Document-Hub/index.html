@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAMS Document Hub | ระบบศูนย์รวมบริการเอกสาร คณะศิลปศาสตร์และวิทยาการจัดการ ม.อ.</title>
+  <meta name="description" content="ระบบสร้างและติดตามคำร้องเอกสารราชการออนไลน์ คณะศิลปศาสตร์และวิทยาการจัดการ มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตสุราษฎร์ธานี (สำหรับบัญชี @psu.ac.th)">
+  <link rel="icon" href="https://lh3.googleusercontent.com/d/1zucBIb3BQ9jd03yl3EN7oQECp0duzcJ4=s192">
+
+  <!-- Open Graph (แสดงการ์ดสวยงามเมื่อแชร์ใน LINE / Facebook / Teams) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lams-psu.github.io/LAMS-Document-Hub/">
+  <meta property="og:title" content="LAMS Document Hub | ระบบศูนย์รวมบริการเอกสาร">
+  <meta property="og:description" content="คณะศิลปศาสตร์และวิทยาการจัดการ มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตสุราษฎร์ธานี">
+  <meta property="og:image" content="https://lh3.googleusercontent.com/d/1zucBIb3BQ9jd03yl3EN7oQECp0duzcJ4=s192">
+
+  <!-- Fallback Redirect กรณีเบราว์เซอร์ปิด JavaScript -->
+  <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbzV0dwFv5vwHiqp-Cmka6dalVt-D1BzDOtzD_eeswgQ2ZP0uHD8MBXakUCdhoD_qwch/exec">
+
+  <script>
+    (function () {
+      var TARGET_URL = 'https://script.google.com/macros/s/AKfycbzV0dwFv5vwHiqp-Cmka6dalVt-D1BzDOtzD_eeswgQ2ZP0uHD8MBXakUCdhoD_qwch/exec';
+      var destination = TARGET_URL + (window.location.search || '') + (window.location.hash || '');
+      window.location.replace(destination);
+    })();
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 24px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px 28px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: #003c71;
+    }
+    p {
+      margin: 0 0 24px;
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      background: #003c71;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 22px;
+      border-radius: 10px;
+    }
+    .btn:hover { background: #002b52; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img class="logo" src="https://lh3.googleusercontent.com/d/1zucBIb3BQ9jd03yl3EN7oQECp0duzcJ4=s192" alt="LAMS PSU">
+    <h1>LAMS Document Hub</h1>
+    <p>กำลังนำท่านเข้าสู่ระบบศูนย์รวมบริการเอกสาร<br>คณะศิลปศาสตร์และวิทยาการจัดการ ม.อ. สุราษฎร์ธานี...</p>
+    <a class="btn" id="fallbackLink" href="https://script.google.com/macros/s/AKfycbzV0dwFv5vwHiqp-Cmka6dalVt-D1BzDOtzD_eeswgQ2ZP0uHD8MBXakUCdhoD_qwch/exec">
+      คลิกที่นี่หากหน้าเว็บไม่เปลี่ยนอัตโนมัติ
+    </a>
+  </main>
+  <script>
+    var link = document.getElementById('fallbackLink');
+    if (link && window.location.search) {
+      link.href = link.href + window.location.search + (window.location.hash || '');
+    }
+  </script>
+</body>
+</html>
