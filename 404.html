@@ -6,15 +6,18 @@
   <title>LAMS PSU Portal</title>
   <script>
     (function () {
-      var DOC_HUB_URL = 'https://script.google.com/a/macros/psu.ac.th/s/AKfycbzV0dwFv5vwHiqp-Cmka6dalVt-D1BzDOtzD_eeswgQ2ZP0uHD8MBXakUCdhoD_qwch/exec';
+      var ROUTES = {
+        'lams-document-hub': 'https://script.google.com/a/macros/psu.ac.th/s/AKfycbzV0dwFv5vwHiqp-Cmka6dalVt-D1BzDOtzD_eeswgQ2ZP0uHD8MBXakUCdhoD_qwch/exec',
+        'lams-congrats-apps': 'https://script.google.com/a/macros/psu.ac.th/s/AKfycbxQCGHfNh5lvt-AuGD89apaccK1dMZ23TMsG4d5uCZO0sn4eavbk-6HCb6LClvFq8b5XQ/exec'
+      };
       var slug = (window.location.pathname || '').replace(/^\/+|\/+$/g, '').toLowerCase();
-      var aliases = ['lams-document-hub'];
-      if (aliases.indexOf(slug) !== -1) {
-        window.location.replace(DOC_HUB_URL + (window.location.search || '') + (window.location.hash || ''));
+      if (Object.prototype.hasOwnProperty.call(ROUTES, slug)) {
+        window.location.replace(ROUTES[slug] + (window.location.search || '') + (window.location.hash || ''));
       }
     })();
   </script>
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
@@ -37,8 +40,13 @@
     }
     h1 { margin: 0 0 8px; font-size: 20px; color: #003c71; }
     p { margin: 0 0 24px; font-size: 14px; color: #475569; }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
     .btn {
-      display: inline-block;
+      display: block;
       background: #003c71;
       color: #ffffff;
       text-decoration: none;
@@ -47,13 +55,17 @@
       padding: 12px 22px;
       border-radius: 10px;
     }
+    .btn:hover { background: #002b52; }
   </style>
 </head>
 <body>
   <main class="card">
     <h1>ไม่พบหน้าที่ท่านต้องการ</h1>
-    <p>กรุณาเข้าใช้งานระบบบริการเอกสารผ่านปุ่มด้านล่าง</p>
-    <a class="btn" href="https://lams-psu.github.io/LAMS-Document-Hub/">เข้าสู่ LAMS Document Hub</a>
+    <p>กรุณาเลือกระบบออนไลน์ของคณะศิลปศาสตร์และวิทยาการจัดการด้านล่าง</p>
+    <div class="actions">
+      <a class="btn" href="https://lams-psu.github.io/LAMS-Document-Hub/">เข้าสู่ LAMS Document Hub</a>
+      <a class="btn" href="https://lams-psu.github.io/LAMS-Congrats-Apps/">เข้าสู่ LAMS Congrats Apps</a>
+    </div>
   </main>
 </body>
 </html>
