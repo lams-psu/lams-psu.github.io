@@ -2,70 +2,53 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; base-uri 'self'; form-action 'none';">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LAMS PSU Portal</title>
-  <script>
-    (function () {
-      var ROUTES = {
-        'lams-document-hub': 'https://script.google.com/a/macros/psu.ac.th/s/AKfycbzV0dwFv5vwHiqp-Cmka6dalVt-D1BzDOtzD_eeswgQ2ZP0uHD8MBXakUCdhoD_qwch/exec',
-        'lams-congrats-apps': 'https://script.google.com/a/macros/psu.ac.th/s/AKfycbxQCGHfNh5lvt-AuGD89apaccK1dMZ23TMsG4d5uCZO0sn4eavbk-6HCb6LClvFq8b5XQ/exec'
-      };
-      var slug = (window.location.pathname || '').replace(/^\/+|\/+$/g, '').toLowerCase();
-      if (Object.prototype.hasOwnProperty.call(ROUTES, slug)) {
-        window.location.replace(ROUTES[slug] + (window.location.search || '') + (window.location.hash || ''));
-      }
-    })();
-  </script>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, sans-serif;
-      background: #f1f5f9;
-      color: #0f172a;
-      padding: 24px;
-    }
-    .card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 32px 28px;
-      max-width: 420px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-    }
-    h1 { margin: 0 0 8px; font-size: 20px; color: #003c71; }
-    p { margin: 0 0 24px; font-size: 14px; color: #475569; }
-    .actions {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .btn {
-      display: block;
-      background: #003c71;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      padding: 12px 22px;
-      border-radius: 10px;
-    }
-    .btn:hover { background: #002b52; }
-  </style>
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#F7F6F1">
+  <title>ไม่พบหน้าที่ต้องการ | คณะศิลปศาสตร์และวิทยาการจัดการ มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตสุราษฎร์ธานี</title>
+
+  <script src="/assets/redirect-404.js"></script>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-  <main class="card">
-    <h1>ไม่พบหน้าที่ท่านต้องการ</h1>
-    <p>กรุณาเลือกระบบออนไลน์ของคณะศิลปศาสตร์และวิทยาการจัดการด้านล่าง</p>
-    <div class="actions">
-      <a class="btn" href="https://lams-psu.github.io/LAMS-Document-Hub/">เข้าสู่ LAMS Document Hub</a>
-      <a class="btn" href="https://lams-psu.github.io/LAMS-Congrats-Apps/">เข้าสู่ LAMS Congrats Apps</a>
+  <a class="skip-link" href="#not-found-main">ข้ามไปยังตัวเลือกระบบ</a>
+
+  <div class="portal-frame">
+    <div class="ambient-stage" aria-hidden="true">
+      <div class="ambient-orb ambient-orb-a"></div>
+      <div class="ambient-orb ambient-orb-b"></div>
     </div>
-  </main>
+
+    <div class="portal-content">
+      <header class="portal-header">
+        <a class="brand-lockup" href="/">
+          <img class="brand-logo" src="/assets/lams-logo.png" width="1024" height="193" fetchpriority="high" alt="คณะศิลปศาสตร์และวิทยาการจัดการ มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตสุราษฎร์ธานี">
+        </a>
+      </header>
+
+      <main class="not-found-main" id="not-found-main" tabindex="-1">
+        <section class="not-found-card" aria-labelledby="not-found-heading">
+          <h1 class="not-found-title" id="not-found-heading">ไม่พบหน้าที่ต้องการ</h1>
+          <p class="not-found-desc">กรุณากลับไปยังหน้าหลักหรือเลือกระบบออนไลน์<wbr><span class="keep-phrase">ของคณะด้านล่าง</span></p>
+          <div class="not-found-actions">
+            <a class="not-found-btn not-found-btn-primary" href="/">กลับหน้าหลักบริการออนไลน์</a>
+            <a class="not-found-btn not-found-btn-secondary" href="https://lams-psu.github.io/LAMS-Document-Hub/" target="_blank" rel="noopener noreferrer"><span translate="no">LAMS Document Hub</span></a>
+            <a class="not-found-btn not-found-btn-secondary" href="https://lams-psu.github.io/LAMS-Congrats-Apps/" target="_blank" rel="noopener noreferrer"><span translate="no">LAMS Congrats Apps</span></a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="portal-footer">
+        <div class="footer-inner">
+          <p class="footer-faculty"><span class="keep-phrase">คณะศิลปศาสตร์และวิทยาการจัดการ</span> <span class="keep-phrase">มหาวิทยาลัยสงขลานครินทร์</span> <span class="keep-phrase">วิทยาเขตสุราษฎร์ธานี</span></p>
+        </div>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
